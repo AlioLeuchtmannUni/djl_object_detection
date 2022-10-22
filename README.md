@@ -1,1 +1,0 @@
-# djl_object_detection

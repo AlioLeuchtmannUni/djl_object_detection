@@ -4,12 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ai.djl</groupId>
-    <artifactId>image-object-detection</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>examples</artifactId>
+    <version>0.20.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <djl.version>0.20.0-SNAPSHOT</djl.version>
+        <!--<exec.mainClass>ai.djl.examples.inference.ObjectDetection</exec.mainClass>-->
     </properties>
 
     <repositories>
@@ -24,38 +26,48 @@
             <dependency>
                 <groupId>ai.djl</groupId>
                 <artifactId>bom</artifactId>
-                <version>0.9.0-SNAPSHOT</version>
+                <version>${djl.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.3.4.RELEASE</version>
+            <artifactId>spring-boot</artifactId>
+            <version>2.7.5</version>
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.7.5</version>
+        </dependency>
+
+        <!-- -->
+        <dependency>
             <groupId>ai.djl</groupId>
             <artifactId>model-zoo</artifactId>
-            <version>0.9.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ai.djl.mxnet</groupId>
             <artifactId>mxnet-model-zoo</artifactId>
-            <version>0.9.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>ai.djl.mxnet</groupId>
             <artifactId>mxnet-engine</artifactId>
-            <version>0.9.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>ai.djl.mxnet</groupId>
-            <artifactId>mxnet-native-auto</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>2.7.5</version>
+            <scope>test</scope>
         </dependency>
+
+
     </dependencies>
 </project>
